@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express=require("express");
 const app=express();
 const mongoose=require("mongoose");
 const _=require("lodash");
-mongoose.connect("mongodb+srv://admin-Puneet:DTg5mB6AHYg6yrdB@cluster0.4jbfb.mongodb.net/todoListDB",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.CLIENT_SECRET,{useNewUrlParser: true, useUnifiedTopology: true});
 const bodyParser=require("body-parser");
 //const date=require(__dirname + "/date.js"); uncmnt lter
 app.use(bodyParser.urlencoded({extended: true})); 
